@@ -1,1 +1,45 @@
-# ai-prompt-generator
+# AI Prompt Generator (generator.io)
+
+A full-stack Next.js web application that leverages Google's Gemini API to generate intelligent AI prompts based on user input. It features a complete user authentication system backed by MongoDB, built beautifully with Tailwind CSS, and designed to run seamlessly on modern serverless deployment platforms like Vercel.
+
+## Features
+
+- **AI Integration**: Powered by the Google Gemini API for fast, high-quality prompt generation.
+- **User Authentication**: Secure Login and Registration system.
+- **Cloud Database**: MongoDB configured with Mongoose for reliable, stateful data storage that works flawlessly on serverless hosts.
+- **Modern UI**: Fully responsive interface styled with Tailwind CSS.
+- **Serverless Ready**: Fully optimized to run on Vercel without Read-Only File System errors.
+
+## Tech Stack
+
+- **Frontend**: Next.js (App Router), React, Tailwind CSS
+- **Backend & API**: Next.js Route Handlers
+- **Database**: MongoDB & Mongoose
+- **AI Model**: `@google/generative-ai` SDK
+- **Deployment**: Vercel
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have [Node.js](https://nodejs.org/) installed along with a MongoDB cluster (e.g., MongoDB Atlas) and a Google Gemini API Key.
+
+### 1. Install dependencies
+```bash
+npm install
+```
+
+### 2. Environment Variables
+Create a `.env` file in the root directory and add the following keys:
+
+```env
+GOOGLE_API_KEY=your_gemini_api_key_here
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/your_db_name
+```
+*(Important: If Deploying to Vercel, guarantee you configured your MongoDB Atlas Network Access rules to allow IP `0.0.0.0/0`.)*
+
+### 3. Run the development server
+```bash
+npm run dev
+```
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
